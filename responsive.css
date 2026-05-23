@@ -1,0 +1,68 @@
+/* responsive.css - Mobile First Strategy */
+
+/* 
+   Note: Ensure this file is linked AFTER style.css in your HTML.
+   Base mobile styles are inherited from style.css. 
+   We use min-width to "build up" the layout.
+*/
+
+/* Small devices (Landscape phones & Phablets, 480px and up) */
+@media (min-width: 480px) {
+    .site-logo {
+        font-size: 2.2em;
+    }
+
+    .hero-section h1 {
+        font-size: 3.5em;
+    }
+
+    .section-title {
+        font-size: 3.2em;
+    }
+
+    .btn {
+        padding: 15px 30px;
+        font-size: 1em;
+    }
+}
+
+/* Medium devices (Tablets, 768px and up) */
+@media (min-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-nav ul {
+        justify-content: flex-end;
+        gap: 35px;
+    }
+
+    .hero-section h1 {
+        font-size: 5em;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .about-text ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Large devices (Desktops, 1024px and up) */
+@media (min-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .container {
+        padding: 0;
+    }
+}
